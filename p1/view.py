@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-
+from django.shortcuts import render
 def index(request):
     return HttpResponse('Hello world')
 
 def home(request):
-    return HttpResponse('<h1>Python is my favorite programming language</h1>')
+    return render(request, 'sample1.html', {})

@@ -26,3 +26,14 @@ def urls_data(request, name):
 def url_cal(request, ab):
     Ab = list(map(int, ab.split(" ")))
     return HttpResponse(f"<h1>Maximum num is: {max(Ab)}</h1>")
+
+def ovel(request, s):
+    ovels = 'aeiouAEIOU'
+    o = 0
+    cnsnt = 0
+    for i in s:
+        if i in ovels:
+            o += 1
+        else:
+            cnsnt += 1
+    return render(request, 'directry/ovelops.html', {'string':s, 'ov':o, 'cons':cnsnt})

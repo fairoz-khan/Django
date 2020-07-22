@@ -27,4 +27,5 @@ urlpatterns = [
     path('fifth', view.fifth, name='fifth'),
     path('urls_data/<name>', view.urls_data, name='urls_data'),
     path('url_sum/<ab>', view.url_cal, name='url_ab'),
+    path('url_ovel/<s>', view.ovel, name='url_ovel'),
 ]

@@ -19,3 +19,10 @@ def fourth(request):
 
 def fifth(request):
     return  render(request, 'directry/fifth.html', {'a':10, 'b':5})
+
+def urls_data(request, name):
+    return HttpResponse(f"<h1>Hello {name}</h1>")
+
+def url_cal(request, ab):
+    Ab = list(map(int, ab.split(" ")))
+    return HttpResponse(f"<h1>Maximum num is: {max(Ab)}</h1>")
